@@ -53,7 +53,7 @@ void insert_sorted(uint64_t data) {
       prev = curr;
       curr = curr->next;
     }
-    // fix
+
     prev->next = new_node;
     if (curr != NULL) {
       new_node->next = curr->next;
@@ -174,7 +174,7 @@ int index_of(uint64_t data) {
 
   return -1;
 }
-// Sum func
+
 uint64_t calculate_sum() {
   uint64_t sum = 0;
   node_t *curr = head;
@@ -194,7 +194,7 @@ int main() {
 
   TEST(info.sum == 1 + 3 + 5 + 2);
   TEST(index_of(2) == 1);
-  // asser to check new func
+
   ASSERT(info.sum == calculate_sum());
 
   return 0;
